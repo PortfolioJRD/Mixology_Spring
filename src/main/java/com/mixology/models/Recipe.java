@@ -1,21 +1,22 @@
 package com.mixology.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Recipe {
+public class Recipe implements Serializable{
 	
 	@Id
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(referencedColumnName = "id")
 	private Ingredients ing;
 	
 	@Id
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(referencedColumnName = "id")
 	private Drink drink;
 
