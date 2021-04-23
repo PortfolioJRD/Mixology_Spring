@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface DrinkDao extends JpaRepository<Drink, Integer> {
 
-    public Drink findDrinkByDrinkname(String name);
-    public Drink findDrinkByDrinkPercent(double percent);
-    public List<Drink> findDrinkByUserId(int userId);
+    public List<Drink> getAllDrink();
+    public Drink getDrinkByDrinkname(String name);
+    public List<Drink> getDrinkByUserId(int userId);
+    public Drink getDrinkById(int drinkId);
 }
