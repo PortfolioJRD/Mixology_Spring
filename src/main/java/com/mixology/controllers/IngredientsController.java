@@ -28,12 +28,12 @@ public class IngredientsController {
 
 
     @PostMapping
-    public ResponseEntity<Ingredients> saveIngredient(@RequestBody Ingredients i){
+    public ResponseEntity<Ingredients> addIngredient(@RequestBody Ingredients i){
         return new ResponseEntity<Ingredients>(is.addIngredient(i), HttpStatus.OK);
     }
 
     @PostMapping("/recipe")
-    public ResponseEntity<Recipe> saveRecipe(@RequestBody Recipe r){
+    public ResponseEntity<Recipe> addRecipe(@RequestBody Recipe r){
         return new ResponseEntity<Recipe>(is.addRecipe(r), HttpStatus.OK);
     }
 
